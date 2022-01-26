@@ -9,11 +9,11 @@
 
 # ASK FOR USER INPUT
 
-user_choice = input("Please enter either 'rock', 'paper', or 'scissors'")
-print(user_choice)
+user_choice = input("Please enter either 'rock', 'paper', or 'scissors': ")
+
+print("USER CHOSE:", user_choice)
 
 # VALIDATE USER INPUTS
-
 
 
 
