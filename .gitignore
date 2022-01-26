@@ -1,0 +1,8 @@
+
+# ignore some hidden files that appear on Mac OS:
+.DS_Store
+
+
+# ignore some specific files that may get generated when running python modules or tests:
+__pycache__
+.pytest-cache
