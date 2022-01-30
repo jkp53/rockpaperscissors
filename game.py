@@ -11,10 +11,16 @@
 
 user_choice = input("Please enter either 'rock', 'paper', or 'scissors': ")
 
-print("USER CHOSE:", user_choice)
 
 # VALIDATE USER INPUTS
 
+#this makes the input case insensitive to validate whether the input is correct, and exits the program
+#for a bad input
+if user_choice.casefold() in ['rock', 'paper', 'scissors']:
+    print("USER CHOSE:", user_choice)
+else:
+    print("Incorrect entry. Please try again.")
+    exit()
 
 
 # COMPUTER CHOICE
