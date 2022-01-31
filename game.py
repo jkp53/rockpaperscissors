@@ -12,18 +12,22 @@ import os
 
 player_name = os.getenv("PLAYER_NAME", default="Player One")
 
-
+# todo: write some Python here to determine the winner
 def determine_winner(user_choice, computer_choice):
-    """
-    Determines the winning choice between two valid choices from selectable options: "rock", "paper", or "scissors".
-
-    Returns the winning choice (e.g. "paper"), or None if there is a tie.
-
-    Example: determine_winner("rock", "paper")
-    """
-    # todo: write some Python here to determine the winner
-
-    return "todo"
+        if (user_choice == computer_choice):
+                return "Tie game"
+        elif ((user_choice == "rock") and (computer_choice == "scissors")):
+                return "You win"
+        elif ((user_choice == "paper") and (computer_choice == "rock")):
+                return("You win")
+        elif ((user_choice == "scissors") and (computer_choice == "paper")):
+                return("You win")
+        elif ((user_choice == "rock") and (computer_choice == "paper")):
+                return("Bummer, computer wins")
+        elif ((user_choice == "scissors") and (computer_choice == "rock")):
+                return("Bummer, computer wins")
+        elif ((user_choice == "paper") and (computer_choice == "scissors")):
+                return("Bummer, computer wins")
 
 
 if __name__ == "__main__":
@@ -57,20 +61,7 @@ if __name__ == "__main__":
 
     # DETERMINE THE WINNER
 
-    if user_choice == computer_choice:
-        print("The game ends in a tie.")
-    elif ((user_choice == "rock") and (computer_choice == "scissors")):
-            print("You won! since", user_choice, "beats", computer_choice)
-    elif ((user_choice == "paper") and (computer_choice == "rock")):
-            print("You won! since", user_choice, "beats", computer_choice)
-    elif ((user_choice == "scissors") and (computer_choice == "paper")):
-            print("You won! since", user_choice, "beats", computer_choice)
-    elif ((user_choice == "rock") and (computer_choice == "paper")):
-            print("Bummer, the computer won since", computer_choice, "beats", user_choice)
-    elif ((user_choice == "scissors") and (computer_choice == "rock")):
-            print("Bummer, the computer won since", computer_choice, "beats", user_choice)
-    elif ((user_choice == "paper") and (computer_choice == "scissors")):
-            print("Bummer, the computer won since", computer_choice, "beats", user_choice)
+    print(determine_winner(user_choice, computer_choice))
 
 
     # FINAL RESULTS
