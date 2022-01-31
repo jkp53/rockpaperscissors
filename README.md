@@ -22,12 +22,12 @@ Install package dependencies (mainly for testing):
 pip install -r requirements.txt
 ```
 
-## Usage
+## Usage (including player customization)
 
-Run the rock paper scissors game:
+Set a custom playere name by changing the name in the quotation marks and run the rock paper scissors game with the following code:
 
 ```sh
-python game.py
+PLAYER_NAME="Jon Snow" python game.py
 ```
 
 ## Testing

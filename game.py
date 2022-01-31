@@ -4,8 +4,16 @@
 #
 # todo: write some Python code here to satisfy the exercise objectives
 # ... https://github.com/prof-rossetti/intro-to-python/blob/main/exercises/rock-paper-scissors/README.md
+
+
+#Player Name Customization
+
+import os
+
+player_name = os.getenv("PLAYER_NAME", default="Player One")
+
 #
-print("Welcome Player 1 to my Rock-Paper-Scissors game...")
+print("Welcome", player_name, "to my Rock-Paper-Scissors game...")
 
 # ASK FOR USER INPUT
 
