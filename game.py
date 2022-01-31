@@ -15,9 +15,9 @@ player_name = os.getenv("PLAYER_NAME", default="Player One")
 # todo: write some Python here to determine the winner
 def determine_winner(user_choice, computer_choice):
         if (user_choice == computer_choice):
-                return "Tie game"
+                return("Tie game")
         elif ((user_choice == "rock") and (computer_choice == "scissors")):
-                return "You win"
+                return("You win")
         elif ((user_choice == "paper") and (computer_choice == "rock")):
                 return("You win")
         elif ((user_choice == "scissors") and (computer_choice == "paper")):
