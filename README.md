@@ -24,7 +24,7 @@ pip install -r requirements.txt
 
 ## Usage (including player customization)
 
-Set a custom playere name by changing the name in the quotation marks and run the rock paper scissors game with the following code:
+Set a custom playere name by changing the name in the quotation marks and play the rock paper scissors game by running the following code:
 
 ```sh
 PLAYER_NAME="Jon Snow" python game.py
