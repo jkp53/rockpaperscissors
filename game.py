@@ -9,20 +9,18 @@ print("Welcome Player 1 to my Rock-Paper-Scissors game...")
 
 # ASK FOR USER INPUT
 
-user_choice = input("Please choose either 'rock', 'paper', or 'scissors': ")
-
-
+user_choice = input("Please choose either 'rock', 'paper', or 'scissors': ").casefold()
 
 # VALIDATE USER INPUTS
 
 #this stores the valid choices in a list
 valid_choices = ['rock', 'paper', 'scissors']
-#this makes the input case insensitive to validate whether the input is correct, and exits the program
-#for a bad input
-if user_choice.casefold() in valid_choices:
+
+#this exits the program if the user doesn't enter one of the valid choices
+if user_choice in valid_choices:
     print("YOU CHOSE:", user_choice)
 else:
-    print("Incorrect entry. Please try again.")
+    print("Oops, incorrect entry. Please try again.")
     exit()
 
 
@@ -35,6 +33,21 @@ print("THE COMPUTER CHOSE:", computer_choice)
 
 
 # DETERMINE THE WINNER
+
+if user_choice == computer_choice:
+    print("The game ends in a tie.")
+elif ((user_choice == "rock") and (computer_choice == "scissors")):
+        print("You won! since", user_choice, "beats", computer_choice)
+elif ((user_choice == "paper") and (computer_choice == "rock")):
+        print("You won! since", user_choice, "beats", computer_choice)
+elif ((user_choice == "scissors") and (computer_choice == "paper")):
+        print("You won! since", user_choice, "beats", computer_choice)
+elif ((user_choice == "rock") and (computer_choice == "paper")):
+        print("Bummer, the computer won since", computer_choice, "beats", user_choice)
+elif ((user_choice == "scissors") and (computer_choice == "rock")):
+        print("Bummer, the computer won since", computer_choice, "beats", user_choice)
+elif ((user_choice == "paper") and (computer_choice == "scissors")):
+        print("Bummer, the computer won since", computer_choice, "beats", user_choice)
 
 
 
