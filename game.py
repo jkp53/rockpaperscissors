@@ -53,3 +53,5 @@ elif ((user_choice == "paper") and (computer_choice == "scissors")):
 
 
 # FINAL RESULTS
+
+print("Thanks for playing. Please play again!")
